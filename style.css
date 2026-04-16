@@ -139,11 +139,30 @@ h1 {
     left: 20px; /* Nudges the title 20px to the right */
     top: -5px;  /* Nudges it up slightly */
 }
+video, img {
+    max-width: 100%;        /* Never wider than the screen */
+    height: auto;           /* Keep aspect ratio */
+    display: block;
+    margin: 0 auto;         /* Center them */
+}
 header {
     position: sticky;
-    top: 0;            /* Required: sticks to the very top */
-    z-index: 100;      /* Keeps it on top of other content */
-    background-color: white; /* Ensure it's opaque so text doesn't overlap */
+    top: 0;
+    z-index: 100;           /* Keeps header on top */
+    background-color: white; /* Prevents text from showing through */
+    width: 100%;
+    max-height: 40vh; /* This means it can only take up 40% of the screen height */
+    overflow-y: auto;  
+    
+    border-bottom: 3px solid var(--main-accent);
+    padding: 10px;
+}
+video {
+    max-width: 100%; /* Ensures it doesn't "cover everything" by being too wide */
+    max-height: 200px; 
+    width: auto;
+    display: block;
+    margin: 0 auto;
 }
 nav {
     position: fixed;
