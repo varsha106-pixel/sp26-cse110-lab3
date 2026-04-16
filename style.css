@@ -1,1 +1,202 @@
+:root {
+  /* Variable definition */
+  --main-accent: #2a5d9a; 
+}
+
+h2 {
+  /* Using the variable with 'darkblue' as a fallback */
+  color: var(--main-accent, darkblue); 
+}
+/* 1. Color Name */
+h3 {
+  color: orange;
+}
+
+/* 2. Hex Code */
+section {
+  background-color: #f9f9f9;
+}
+
+/* 3. RGB/RGBA (Alpha controls transparency) */
+header {
+  border-color: rgba(42, 93, 154, 0.8);
+}
+
+/* 4. HSL (Hue, Saturation, Lightness) */
+footer {
+  color: hsl(0, 0%, 30%);
+}
+
+/* 5. Wider-gamut color used below with grid display on main */
+
+
+/* 6. Color-mix */
+h1 {
+  /* Mixes 40% blue with white */
+  background-color: color-mix(in srgb, blue 40%, white);
+}
+/*absolute units*/
+header {
+  border-width: 2px;          /* Unit 1: px */
+}
+h2 {
+  margin-bottom: 12pt;        /* Unit 2: pt */
+}
+img {
+  max-width: 15cm;            /* Unit 3: cm */
+}
+/*relative units*/
+body {
+  font-size: 1.2rem;          /* Unit 1: rem */
+}
+
+main {
+  width: 90%;                 /* Unit 2: % */
+}
+
+section {
+  min-height: 20vh;           /* Unit 3: vh  */
+}
+CSS
+/*longhand margin*/
+header {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* shorthand margin*/
+section {
+    margin: 20px 10px 20px 10px; 
+}
+
+/* auto margin*/
+main {
+    margin: auto;
+    width: 80%; 
+}
+/* longhand padding */
+ul {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 0px;
+}
+
+/* shorthand padding */
+div {
+    
+    padding: 15px 30px; 
+}
+header {
+    border-width: 5px;
+    border-style: double;  
+    border-color: #2a5d9a;
+}
+section {
+    border: 2px dashed orange; 
+}
+img {
+    border: 3px solid black;
+    border-radius: 15px; 
+}
+p {
+  color: #333333; /*dark gray*/
+}
+/* Removing underlines from links */
+nav a {
+  text-decoration: none;
+}
+
+/* Adding a custom underline to section headers */
+h2 {
+  text-decoration: underline wavy orange; 
+}
+footer {
+  text-align: right; /*align footer right*/
+}
+/* makes span behave like block*/
+span {
+    display: block; 
+    background-color: #eee;
+    margin-bottom: 10px;
+}
+/* display inline */
+li {
+    display: inline;
+    margin-right: 15px;
+}
+header {
+  height: 300px; /* Absolute unit */
+  width: 100%;   /* Relative unit - fills the screen */
+}
+section {
+  min-width: 300px; 
+  background-color: white;
+}
+h1 {
+    position: relative;
+    left: 20px; /* Nudges the title 20px to the right */
+    top: -5px;  /* Nudges it up slightly */
+}
+header {
+    position: sticky;
+    top: 0;            /* Required: sticks to the very top */
+    z-index: 100;      /* Keeps it on top of other content */
+    background-color: white; /* Ensure it's opaque so text doesn't overlap */
+}
+nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+nav a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+/* Make the button look "pressed" */
+button:active {
+    background-color: black;
+    transform: scale(0.95); /* Shrinks it slightly to mimic a press */
+}
+button:hover {
+    background-color: #2a5d9a;
+    cursor: pointer;
+}
+header {
+    display: flex;             /* Required: display property */
+    flex-direction: column;    /* Attribute 1 */
+    align-items: center;       /* Attribute 2 */
+    justify-content: center;   /* Attribute 3 */
+    gap: 1.5rem;               /* Bonus: clean spacing */
+}
+main {
+    display: grid;                        /* Required: display property */
+    grid-template-columns: 1fr;           /* Attribute 1: defines columns */
+    grid-row-gap: 30px;                   /* Attribute 2: vertical spacing */
+    justify-items: stretch;               /* Attribute 3: horizontal alignment */
+    padding: 2rem;
+    background-color: color(display-p3 0.9 0.9 0.9);
+}
+body {
+    font-family: 'Inter', sans-serif; /* Requirement: Use the 3rd party font */
+}
+@media (max-width: 768px) {
+    main {
+        /* Change your grid to a single column for small screens */
+        grid-template-columns: 1fr; 
+        padding: 10px;
+    }
+
+    header {
+        /* Ensure media elements don't overflow */
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Make text slightly smaller on mobile */
+    }
+}
+
+
 
