@@ -16,7 +16,7 @@
   <body>
     <header>
        
-       <h1>Meeting #1 Notes</h1>
+       <h1 id="main-title">Meeting #1 Notes</h1>
         <h2>Brainstorm</h2>
         <h3>attendance/ideas/intros</h3>
 
@@ -31,7 +31,7 @@
        </audio>
         <p><strong>Remember to come to meetings on time</strong></p>
         <div>
-            <section>
+            <section class="note-section">
                 <ul>
                     <li>People attended: </li>
                     <li>Ana</li> 
@@ -41,21 +41,38 @@
                     <li>Lisa</li> 
                 </ul>
             </section>
+            <section class="note-section">
+    <h3>Action Items</h3>
+    <ul class="task-list">
+        <li>
+            <input type="checkbox" id="task1" name="tasks">
+            <label for="task1">Design the robot's arm architecture</label>
+        </li>
+        <li>
+            <input type="checkbox" id="task2" name="tasks">
+            <label for="task2">Order watermelon-themed stickers for the team</label>
+        </li>
+        <li>
+            <input type="checkbox" id="task3" name="tasks">
+            <label for="task3">Prepare presentation for Lab 4</label>
+        </li>
+    </ul>
+</section>
 
         </div>
         <hr>
-        <section>
+        <section class="note-section">
              <p>Today's agenda:<br> <b>introductions</b><span> and <i>brainstorm ideas</i></span> for newest project</p>
 
         </section>
         <hr>
-        <section>
+        <section class="note-section">
             <p>intros:<br>Ana from Bolivia and 27, Joe from France and 56, Bob from Sweden and 33, Billy from Chilé and 50, John from Zimbabwe and 45, Lisa from United States and 30</p>
 
         </section>
         <hr>
 
-        <section>
+        <section class="note-section">
             <ol>
                
                <li>ideas:</li> 
@@ -89,7 +106,7 @@
             <fieldset>
                 <legend>Info</legend>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your name">
+                <input type="text" id="name" name="name" class="input-field" placeholder="Your name">
                 <label for="start-date">Project Start Date:</label>
                 <input type="date" id="start-date" name="start-date">
 

@@ -136,14 +136,14 @@ section {
 }
 h1 {
     position: relative;
-    left: 20px; /* Nudges the title 20px to the right */
-    top: -5px;  /* Nudges it up slightly */
+    left: 20px; 
+    top: -5px;  
 }
 video, img {
     max-width: 100%;        /* Never wider than the screen */
     height: auto;           /* Keep aspect ratio */
     display: block;
-    margin: 0 auto;         /* Center them */
+    margin: 0 auto;         
 }
 header {
     position: sticky;
@@ -151,14 +151,14 @@ header {
     z-index: 100;           /* Keeps header on top */
     background-color: white; /* Prevents text from showing through */
     width: 100%;
-    max-height: 40vh; /* This means it can only take up 40% of the screen height */
+    max-height: 40vh; 
     overflow-y: auto;  
     
     border-bottom: 3px solid var(--main-accent);
     padding: 10px;
 }
 video {
-    max-width: 100%; /* Ensures it doesn't "cover everything" by being too wide */
+    max-width: 100%; 
     max-height: 200px; 
     width: auto;
     display: block;
@@ -176,29 +176,29 @@ nav a:hover {
 /* Make the button look "pressed" */
 button:active {
     background-color: black;
-    transform: scale(0.95); /* Shrinks it slightly to mimic a press */
+    transform: scale(0.95); 
 }
 button:hover {
     background-color: #2a5d9a;
     cursor: pointer;
 }
 header {
-    display: flex;             /* Required: display property */
-    flex-direction: column;    /* Attribute 1 */
-    align-items: center;       /* Attribute 2 */
-    justify-content: center;   /* Attribute 3 */
-    gap: 1.5rem;               /* Bonus: clean spacing */
+    display: flex;             
+    flex-direction: column;    
+    align-items: center;      
+    justify-content: center;  
+    gap: 1.5rem;               
 }
 main {
-    display: grid;                        /* Required: display property */
-    grid-template-columns: 1fr;           /* Attribute 1: defines columns */
-    grid-row-gap: 30px;                   /* Attribute 2: vertical spacing */
-    justify-items: stretch;               /* Attribute 3: horizontal alignment */
+    display: grid;                       
+    grid-template-columns: 1fr;           
+    grid-row-gap: 30px;                  
+    justify-items: stretch;               
     padding: 2rem;
     background-color: color(display-p3 0.9 0.9 0.9);
 }
 body {
-    font-family: 'Inter', sans-serif; /* Requirement: Use the 3rd party font */
+    font-family: 'Inter', sans-serif; 
 }
 @media (max-width: 768px) {
     main {
@@ -213,7 +213,70 @@ body {
     }
 
     h1 {
-        font-size: 1.5rem; /* Make text slightly smaller on mobile */
+        font-size: 1.5rem; 
+    }
+}
+/* Universal Selector (*) */
+* {
+    box-sizing: border-box;
+}
+
+/* Attribute Selector ([attribute=foo]) */
+input[type="date"] {
+    border: 2px solid var(--main-accent);
+}
+
+/* Selector List (element, element) */
+h1, h2, h3 {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+
+
+/* Descendant Combinator (element element) */
+main p strong {
+    color: var(--main-accent);
+}
+
+/* Child Combinator (element > element) */
+ul > li {
+    list-style-type: "🍉 "; /* Custom bullet for Team Watermelon */
+}
+
+/* General Sibling Combinator (element ~ element) */
+ul ~ p {
+    font-weight: bold;
+}
+
+/* Adjacent Sibling Combinator (element + element) */
+section + hr {
+    border-top: 5px dotted var(--main-accent);
+}
+
+
+/* :has() Selector: Styles a section ONLY if it contains a <details> tag */
+section:has(details) {
+    border: 3px solid orange;
+    background-color: #fffbe6;
+}
+
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    
+    & p {
+        margin: 10px 0;
+        
+    }
+    
+    & nav a {
+        color: #d35400;
+        font-weight: 700;
+        
+        &:hover {
+            color: #e67e22;
+        }
     }
 }
 
